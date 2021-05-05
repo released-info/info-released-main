@@ -1,0 +1,106 @@
+<!--
+  _PAGE_TITLE_
+  _PAGE_DESCRIPTION_
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+  <link rel="icon" href="./assets/img/favicon.svg" sizes="any" type="image/svg+xml">
+  <title>_PAGE_TITLE_</title>
+  <meta name="description" content="_PAGE_DESCRIPTION_">
+</head>
+
+<body>
+
+  <header class="navbar navbar-dark bg-dark box-shadow">
+    <div class="container-lg">
+      <div class="row">
+        <div class="col-12">
+          <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <i class="bi bi-clock"></i> released.info
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+    <section class="text-center py-3">
+      <div class="container-lg">
+        <h1>
+          API for developers
+        </h1>
+      </div>
+    </section>
+    <div class="py-5 bg-light">
+      <div class="container-lg">
+        <p>I know that you are waiting for a release of your favourite technology.</p>
+        <p class="mb-4">You can call our API for free.</p>
+        <h5 class="fw-bold">Get a list of supported products:</h5>
+        <p>Example call:</p>
+        <pre><code>GET https://released.info/products</code></pre>
+        <p>Example response:</p>
+        <pre><code>{
+      "products": {
+          "java",
+          "postgresql"
+      }
+  }</code></pre>
+        <h5 class="mt-4 fw-bold">Get status of product:</h5>
+        <p>Example call:</p>
+        <pre><code>GET https://released.info/products/java</code></pre>
+        <pre><code>{
+      "product": "java",
+      "full_name": "Java 17",
+      "released": false,
+      "release_date": "2021-10-23",
+  }</code></pre>
+        <h5 class="mt-5 fw-bold">Rate limiting</h5>
+        <p>Status is updated every hour. Clients are suppose to call our API not more frequently than once per hour.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-light">
+    <div class="container-lg">
+      <ul>
+        <li>
+          <a href="./index.html">
+            released.info
+          </a>
+        </li>
+        <li>
+          <a href="./terms.html">
+            Terms of use
+          </a>
+        </li>
+        <li>
+          <a href="./privacy.html">
+            Privacy policy
+          </a>
+        </li>
+        <li>
+          <a href="./api.html">
+            API
+          </a>
+        </li>
+        <li>
+          <a href="./contact.html">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+
+</html>
