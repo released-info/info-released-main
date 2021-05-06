@@ -1,0 +1,474 @@
+@import url('vendor/bootstrap.min.css');
+@import url('vendor/bootstrap-icons.css');
+@import url('vendor/odometer.css');
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    height: 100%;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  section {
+    padding: 5rem 0;
+  }
+
+  section h2 {
+    margin-bottom: 4.5rem;
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  section .row {
+    justify-content: center !important;
+  }
+
+  .released-info {
+    padding: 2rem 0 3rem 0;
+    position: relative;
+  }
+
+  .go-back {
+    font-size: 4vw;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    padding: 0 1rem;
+    cursor: pointer;
+    opacity: 0.6;
+  }
+
+  .go-back:hover {
+    opacity: 0.9;
+  }
+
+  @media (min-width: 1074px) {
+    .go-back {
+      font-size: 3rem;
+    }
+  }
+
+  @media (max-width: 1010px) {
+    .go-back {
+      font-size: 2.5rem;
+    }
+  }
+
+  .released-info.not-found-page {
+    padding: 0;
+  }
+
+  .released-info.not-found-page main {
+    height: 100%;
+  }
+
+  .released-info.not-found-page main section {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .released-info .social-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+  }
+
+  .released-info .social-links li {
+    padding: 0.5rem 1rem;
+  }
+
+  .released-info .social-links li a {
+    display: inline-block;
+    padding: 0.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+  }
+
+  .released-info .social-links li a:hover {
+    opacity: 0.9;
+  }
+
+  .released-info h2 {
+    margin-bottom: 2rem;
+  }
+
+  .released-info h3 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .released-info h4 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+ .released-info .col-lg-8 {
+    position: relative;
+  }
+
+  .released-info .col-lg-8 #logo {
+    width: 10vw;
+    max-width: 200px;
+    position: absolute;
+    left: -12vw;
+    bottom: -2.8vw;
+  }
+
+  @media (max-width: 991px) {
+    .released-info .col-lg-8 #logo {
+      display: none;
+    }
+  }
+
+  .released-info .col-lg-8 #logo img {
+    width: 100%;
+  }
+
+  .released-info .white-box {
+    background-color: #fff;
+    color: #282f32;
+    height: 30vw;
+    max-height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 13vw;
+  }
+
+  .released-info .odometer-content {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    font-size: 7rem;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 530px) {
+    .released-info .odometer-content.items_3 {
+      font-size: 6rem;
+    }
+    .released-info .odometer-content.items_3 .odometer-digit {
+      padding: 0 1.7rem !important;
+      margin: 0 0.8rem !important;
+    }
+  }
+
+  @media (max-width: 470px) {
+    .released-info .odometer-content.items_3 {
+      font-size: 5rem;
+    }
+    .released-info .odometer-content.items_3 .odometer-digit {
+      padding: 0 1.5rem !important;
+      margin: 0 0.7rem !important;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .released-info .odometer-content.items_3 {
+      font-size: 4.3rem;
+    }
+    .released-info .odometer-content.items_3 .odometer-digit {
+      padding: 0 1.2rem !important;
+      margin: 0 0.6rem !important;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .released-info .odometer-content.items_3 {
+      font-size: 3.5em;
+    }
+    .released-info .odometer-content.items_3 .odometer-digit {
+      padding: 0 1rem !important;
+      margin: 0 0.5rem !important;
+    }
+  }
+
+  @media (max-width: 270px) {
+    .released-info .odometer-content.items_3 {
+      font-size: 3em;
+    }
+    .released-info .odometer-content.items_3 .odometer-digit {
+      padding: 0 0.8rem !important;
+      margin: 0 0.4rem !important;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .released-info .odometer-content.items_2 {
+      font-size: 6rem;
+    }
+    .released-info .odometer-content.items_2 .odometer-digit {
+      padding: 0 1.5rem !important;
+      margin: 0 0.8rem !important;
+    }
+  }
+
+  @media (max-width: 300px) {
+    .released-info .odometer-content.items_2 {
+      font-size: 5rem;
+    }
+    .released-info .odometer-content.items_2 .odometer-digit {
+      padding: 0 1.2rem !important;
+      margin: 0 0.6rem !important;
+    }
+  }
+
+  @media (max-width: 240px) {
+    .released-info .odometer-content.items_2 {
+      font-size: 4rem;
+    }
+    .released-info .odometer-content.items_2 .odometer-digit {
+      padding: 0 1rem !important;
+      margin: 0 0.5rem !important;
+    }
+  }
+
+  .released-info .text-center a {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 4px;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    opacity: 0.6;
+  }
+
+  .released-info .text-center img {
+    margin-right: 0.5rem;
+  }
+
+  .released-info .text-center a:hover {
+    opacity: 0.9;
+  }
+
+  .released-info.not-found-page .white-box {
+    font-size: 12vw;
+    height: 40vw;
+    max-height: 320px;
+    text-align: center;
+  }
+
+  @media (min-width: 992px) {
+    .released-info .white-box {
+      font-size: 7rem;
+    }
+    .released-info #no-information {
+      font-size: 5rem;
+    }
+    .released-info.not-found-page .white-box {
+      font-size: 4.5rem;
+    }
+  }
+
+
+  .features-section {
+    position: relative;
+    background-color: #fff;
+  }
+
+  .features-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.4rem;
+  }
+
+  .features-section ul li {
+    margin-bottom: 1.25rem;
+    padding-left: 2.7rem;
+    background: transparent url('../img/star.svg') no-repeat 0 2px;
+  }
+
+  .features-section a {
+    padding: 10px 25px;
+    width: 175px;
+    border-radius: 90px;
+    font-size: 1rem;
+  }
+  
+  .features-section .logo-container {
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    background-size: contain !important;
+    right: 0;
+    bottom: -4.7vw;
+  }
+
+  @media (min-width: 1300px) {
+    .features-section .logo-container {
+      max-width: 260px;
+      max-height: 260px;
+      bottom: -60px;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .features-section .logo-container {
+      max-width: 280px;
+      max-height: 280px;
+      bottom: -65px;
+    }
+  }
+
+  @media (min-width: 1700px) {
+    .features-section .logo-container {
+      max-width: 320px;
+      max-height: 320px;
+      bottom: -75px;
+    }
+  }
+
+  @media (min-width: 1750px) {
+    .features-section .logo-container {
+      max-width: 340px;
+      max-height: 340px;
+      bottom: -80px;
+    }
+  }
+
+  .features-section .logo-container img {
+    width: 100%;
+  }
+
+  .posts-section,
+  .btn-primary {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .btn-primary:hover {
+      opacity: 0.8;
+  }
+
+  .posts-section .row .col-sm-4 {
+    margin-bottom: 4rem;
+  }
+
+  .posts-section .row .col-sm-4 a {
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    min-height: 170px;
+    max-height: 250px;
+    height: 100%;
+    overflow: hidden;
+    flex-direction: column;
+    text-decoration: none;
+    position: relative;
+    opacity: 0.9;
+  }
+
+  .posts-section .row .col-sm-4 a:hover {
+    opacity: 1;
+  }
+
+  .posts-section .row .col-sm-4 a span {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    color: #454545;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  .posts-section .news {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .posts-section .news .form {
+    height: 5rem;
+    padding: 1.5rem 0 0 0;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+  }
+
+  .posts-section .news .form #input-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .posts-section .news .form input {
+    max-width: 270px;
+    width: 100%;
+    margin-right: 1rem;
+  }
+
+  .posts-section .news #subscription-success {
+    display: none;
+    position: absolute;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+
+  .footer-dark {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #282f32;
+  }
+
+  .footer-dark ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .footer-dark ul li {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+
+  .footer-dark ul li:last-child {
+    margin: 0;
+  }
+
+  .footer-dark a {
+    color: #6c757d !important;
+    text-decoration: none;
+  }
+
+  .footer-dark a:hover {
+    color: #e7e7e7 !important;
+  }
+
+  ::-moz-selection { /* Code for Firefox */
+    color: #000;
+    background: #ffc107;
+  }
+  
+  ::selection {
+    color: #000;
+    background: #ffc107;
+  }
