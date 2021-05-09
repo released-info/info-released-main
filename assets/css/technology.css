@@ -311,18 +311,17 @@ section .row {
 
 .features-section .logo-container {
     position: absolute;
-    width: 20vw;
-    height: 20vw;
+    width: 15vw;
+    height: 15vw;
     background-size: contain !important;
     right: 0;
-    bottom: -4.7vw;
+    bottom: 0;
 }
 
 @media (min-width: 1300px) {
     .features-section .logo-container {
         max-width: 260px;
         max-height: 260px;
-        bottom: -60px;
     }
 }
 
@@ -330,7 +329,6 @@ section .row {
     .features-section .logo-container {
         max-width: 280px;
         max-height: 280px;
-        bottom: -65px;
     }
 }
 
@@ -338,7 +336,6 @@ section .row {
     .features-section .logo-container {
         max-width: 320px;
         max-height: 320px;
-        bottom: -75px;
     }
 }
 
@@ -346,7 +343,6 @@ section .row {
     .features-section .logo-container {
         max-width: 340px;
         max-height: 340px;
-        bottom: -80px;
     }
 }
 
@@ -366,51 +362,77 @@ section .row {
 
 .posts-section .row > div {
     margin-bottom: 4rem;
-    width: 20%;
+    min-height: 340px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
-@media (max-width: 991px) {
-    .posts-section .row > div {
-        width: 25%;
-    }
-}
-
-@media (max-width: 787px) {
-    .posts-section .row > div {
-        width: 30%;
-    }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 767px) {
     .posts-section .row > div {
         width: 50%;
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 450px) {
     .posts-section .row > div {
         width: 100%;
     }
 }
 
-.posts-section .row > div a {
+.posts-section .row > div > span {
     display: flex;
     justify-content: flex-end;
-    width: 100%;
+    width: 70%;
     height: 100%;
     flex-direction: column;
     text-decoration: none;
-    opacity: 0.8;
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 1200px) {
+    .posts-section .row > div > span {
+        width: 90%;
+    }
+}
+
+@media (max-width: 887px) {
+    .posts-section .row > div > span {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .posts-section .row > div > span {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .posts-section .row > div > span {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .posts-section .row > div > span {
+        width: 70%;
+    }
+}
+
+.posts-section .row > div a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .posts-section .row > div a img {
     width: 100%;
     height: auto;
     max-height: 320px;
-}
-
-.posts-section .row > div a:hover {
-    opacity: 1;
 }
 
 .posts-section .row > div a span {
@@ -422,6 +444,11 @@ section .row {
     text-decoration: none;
     background-color: #fff;
     width: 100%;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 500;
 }
 
 .posts-section .news {
