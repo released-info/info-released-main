@@ -59,7 +59,19 @@ $(function () {
         return '';
       }
 
-
+    // twiiter
+    var loadTwitter = function () {
+        var text = getMetaTag("twitter:description")
+        var url = getMetaTag("url")
+        var postBy = getMetaTag("twitter:site")
+        var href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url)
+        if (postBy) {
+            href +=  '&via=' + postBy
+        }
+        $('.share-twitter').each(function () {
+            $(this).attr('href', href)
+        })
+    }
     
     // facebook
     var loadFacebook = function () {
@@ -118,7 +130,7 @@ $(function () {
     }
 
     resetFormState()
-
+    loadTwitter()
     loadFacebook()
     loadLinkedIn()
     loadOdometer()
