@@ -133,14 +133,19 @@ section .row {
     bottom: -2.8vw;
 }
 
+.released-info .col-lg-8 #logo span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain !important;
+}
+
 @media (max-width: 991px) {
     .released-info .col-lg-8 #logo {
         display: none;
     }
-}
-
-.released-info .col-lg-8 #logo img {
-    width: 100%;
 }
 
 .released-info .white-box {
@@ -285,7 +290,6 @@ section .row {
     }
 }
 
-
 .features-section {
     position: relative;
     background-color: #fff;
@@ -315,9 +319,17 @@ section .row {
     position: absolute;
     width: 15vw;
     height: 15vw;
-    background-size: contain !important;
     right: 0;
     bottom: 0;
+}
+
+.features-section .logo-container span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain !important;
 }
 
 @media (min-width: 1300px) {
@@ -346,10 +358,6 @@ section .row {
         max-width: 340px;
         max-height: 340px;
     }
-}
-
-.features-section .logo-container img {
-    height: 100%;
 }
 
 .posts-section,
