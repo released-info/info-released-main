@@ -487,7 +487,7 @@ section .row {
     color: #fff;
 }
 
-
+/* 
 .newsletter-section .news {
     margin-top: 2rem;
     font-size: 1.25rem;
@@ -520,7 +520,7 @@ section .row {
     position: absolute;
     font-weight: bold;
     font-size: 2.5rem;
-}
+} */
 
 .footer-dark {
     text-align: center;
@@ -548,7 +548,7 @@ section .row {
     text-decoration: none;
 }
 
-.footer-light .highlight a {
+.footer-dark .highlight a {
     color: #fff !important;
     font-weight: 400;
   }
