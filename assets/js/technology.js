@@ -4,51 +4,6 @@ $(function () {
         window.history.back()
     })
 
-    // subscribe to technology
-    var subscribe = function (email) {
-        // do sth with email
-        // when finished:
-        $('#input-container').fadeOut(function () {
-            $('#subscription-success').fadeIn()
-        })
-    }
-
-    // reset form state
-    var resetFormState = function () {
-        $('#subscribe-input').val('')
-        $('#subscribe-button').attr('disabled', true);
-    };
-
-    // submit subscription
-    var submitSubscription = function () {
-        var email = $('#subscribe-input').val();
-        subscribe(email)
-        // reset state form
-        resetFormState()
-    };
-
-    // subscribe button click
-    $('#subscribe-button').click(function (e) {
-        e.preventDefault()
-        submitSubscription()
-    });
-
-    // enter on subscribe input
-    $('#subscribe-input').on('keyup', function (e) {
-        var email = $(this).val();
-        var regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        if (regex.test(email.toLowerCase())) {
-            $('#subscribe-button').attr('disabled', false);
-            var keycode = (e.keyCode ? e.keyCode : e.which);
-            if (keycode == '13') {
-                $('.subscribe-button').attr('disabled', true);
-                submitSubscription()
-            }
-            return
-        }
-        $('#subscribe-button').attr('disabled', true);
-    });
-
     var getMetaTag = function (metaName) {
         var metas = document.getElementsByTagName('meta');
         for (let i = 0; i < metas.length; i++) {
@@ -129,10 +84,21 @@ $(function () {
         }
     }
 
-    resetFormState()
+    var loadHighlightForDescription1 = function() {
+        var text = $("#highlighted-text-desc1").val()
+        if (text) {
+            var el = $('#highlightTextDescription1')
+            if (el.text().includes(text)) {
+                var items = el.text().split(text)
+                el.html(items[0] + ' <span class="highlightFoundedText">' + txtArr[i] + '</span> ' + items[1])
+            }
+        }
+    }
+
     loadTwitter()
     loadFacebook()
     loadLinkedIn()
     loadOdometer()
+    loadHighlightForDescription1();
 
 })
