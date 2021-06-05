@@ -1,5 +1,6 @@
 @import url('vendor/bootstrap.min.css');
 @import url('vendor/bootstrap-icons.css');
+@import url('newsletter.css');
 
 html, body {
     margin: 0;

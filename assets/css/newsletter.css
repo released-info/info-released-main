@@ -1,0 +1,57 @@
+.newsletter {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.newsletter.blue {
+    margin-top: 4rem;
+}
+
+.newsletter .mail {
+    background-color: rgba(0,0,0,0.4);
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter.blue .mail {
+    background-color: #17a2b8;
+}
+
+.newsletter .mail h2 {
+    margin-bottom: 1.5rem !important;
+    font-size: 2.5rem !important;
+    font-weight: 300 !important;
+    color: #fff !important;
+}
+
+.newsletter .mail form #mc_embed_signup_scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter .mail form label {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+    color: #fff !important;
+}
+
+.newsletter .mail form #input-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    max-width: 480px;
+}
+
+.newsletter .mail form #input-container .form-control {
+    margin-right: 1rem;
+}
