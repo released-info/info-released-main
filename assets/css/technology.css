@@ -548,6 +548,11 @@ section .row {
     text-decoration: none;
 }
 
+.footer-light .highlight a {
+    color: #fff !important;
+    font-weight: 400;
+  }
+
 .footer-dark a:hover {
     color: #e7e7e7 !important;
 }

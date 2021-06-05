@@ -16,7 +16,6 @@ $(function () {
                 return
             }
             $(this).show()
-            // console.log((".col-md-4:hidden").length)
         })
         if($("#items .col-md-4:visible").length === 0) {
             $("#search-no-result").show()
@@ -39,6 +38,32 @@ $(function () {
         resetSearch();
     })
 
+    // faq accordion
+    var loadAccordion = function() {
+        $('.faq dt').each(function () {
+            $(this).append('<div class="icon"><i class="bi bi-chevron-down"></i></div>')
+            $(this).on('click', function() {
+                var arrow = $(this).find('i')
+                if ($(this).hasClass('active')) {
+                    $(this).removeClass('active')
+                    $(this).next('dd').slideUp(function() {
+                        $(arrow).removeClass('bi-chevron-up').addClass('bi-chevron-down')
+                    })
+                } else {
+                    $('dt').removeClass('active')
+                    $("dd").slideUp(function() {
+                        $('dt').find('i').removeClass('bi-chevron-up').addClass('bi-chevron-down')
+                    })
+                    $(this).addClass('active')
+                    $(this).next('dd').slideDown(function() {
+                        $(arrow).removeClass('bi-chevron-down').addClass('bi-chevron-up')
+                    })
+                }
+            });
+        })
+    }
+
     resetSearch();
+    loadAccordion();
 
 })

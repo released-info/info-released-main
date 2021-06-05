@@ -153,64 +153,32 @@ html, body {
     white-space: nowrap;
   }
 
-  .blog article {
-    padding: 2.2rem 0 1.5rem 0;
-    border-top: 1px solid #e7e7e7;
+  .faq .description-title > div:first-child {
+    width: 100%;
   }
-
-  .blog article:first-child {
-    border: 0 !important;
-  }
-
-  .blog article h1 {
-    font-size: 1.4rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .blog article .entry p {
+  
+  .faq .description-title > div.icon {
     display: flex;
-    line-height: 1.8rem;
+    align-items: center;
+    height: 24px;
   }
-
-  .blog article .entry img {
-    width: 120px;
-    margin-right: 2rem;
+  
+  .faq .description-title .bi {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #565656;
+    line-height: 52px;
+    }
+  
+  .faq .description-title:hover,
+  .faq .description-title.active {
+    border: 2px solid rgba(23, 162, 184, 0.6);
+    cursor: pointer;
   }
-
-  .blog article .entry .read-more {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-  }
-
-  .blog .post {
-    padding-top: 5rem !important;
-  }
-
-  .blog .post .container-lg {
-    position: relative;
-  }
-
-  .blog .post p {
-    line-height: 1.8rem;
-  }
-
-  .blog .post p:first-child {
-    display: flex;
-    line-height: 1.8rem;
-    margin-bottom: 2rem;
-  }
-
-  .blog .post img {
-    width: 120px;
-    margin-right: 2rem;
-  }
-
-  .blog .post .date {
-    color: #787878;
-    position: absolute;
-    top: -3rem;
-    right: 1rem;
+  
+  .faq .description {
+    display: none;
+    padding: 0 1rem 1rem 1rem;
   }
 
   .footer-light {
@@ -238,6 +206,11 @@ html, body {
       text-decoration: none;
   }
 
+  .footer-light .highlight a {
+    color: #000 !important;
+    font-weight: 400;
+  }
+
   .footer-light a:hover {
     color: #454545 !important;
   }
@@ -259,3 +232,16 @@ html, body {
     color: #000;
     background: #ffc107;
   }
+
+  .faq .description-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.8rem 1rem;
+    border: 2px solid rgba(23, 162, 184, 0.4);
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    font-weight: 400; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
