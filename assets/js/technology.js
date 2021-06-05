@@ -90,7 +90,7 @@ $(function () {
             var el = $('#highlightTextDescription1')
             if (el.text().includes(text)) {
                 var items = el.text().split(text)
-                el.html(items[0] + ' <span class="highlightFoundedText">' + txtArr[i] + '</span> ' + items[1])
+                el.html(items[0] + ' <span class="highlightFoundedText">' + text + '</span> ' + items[1])
             }
         }
     }
