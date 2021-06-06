@@ -1,19 +1,23 @@
 $(function () {
 
-    // enter on subscribe input
-    $('#mce-EMAIL').on('keyup', function (e) {
-        var email = $(this).val();
-        var regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        if (regex.test(email.toLowerCase())) {
-            $('#mc-embedded-subscribe').attr('disabled', false);
-            var keycode = (e.keyCode ? e.keyCode : e.which);
-            if (keycode == '13') {
-                $('#mc-embedded-subscribe').click()
-            }
-            return
-        }
-        $('#mc-embedded-subscribe').attr('disabled', true);
-    });
+    var initReadMoreAboutSection = function() {
+        $(".about-section .container-lg").append("<div class='text-center'><i id='hide-about' class='bi bi-arrow-up'></i><span class='btn btn-primary btn-lg' id='more-about'>Read more</span></div>")
+        
+        $("#more-about").on('click', function() {
+            $(this).hide()
+            $("#hide-about").css("display", "flex")
+            $("#hidden-about").slideDown(function() {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $(".about-section").offset().top
+                }, 0);
+            })
+        })
+        $("#hide-about").on('click', function() {
+            $(this).hide()
+            $("#more-about").show()
+            $("#hidden-about").slideUp()
+        })
+    }
 
     var getMetaTag = function (metaName) {
         var metas = document.getElementsByTagName('meta');
@@ -106,6 +110,7 @@ $(function () {
         }
     }
 
+    initReadMoreAboutSection()
     loadTwitter()
     loadFacebook()
     loadLinkedIn()

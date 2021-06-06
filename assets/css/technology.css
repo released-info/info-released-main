@@ -457,6 +457,43 @@ section .row {
     text-align: center;
 }
 
+.about-section .text-center {
+    display: flex;
+    justify-content: center;
+}
+
+.about-section .text-center #more-about {
+    margin-top: 3rem;
+    padding: 10px 25px;
+    width: 175px;
+    border-radius: 90px;
+    font-size: 1rem;
+}
+
+.about-section .text-center #hide-about {
+    margin-top: 3rem;
+    border: 2px solid #676767;
+    opacity: 0.4;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.about-section .text-center #hide-about:hover {
+    opacity: 0.9;
+}
+
+.about-section #hidden-about,
+.about-section .text-center #hide-about {
+    display: none;
+}
+
 .about-section ul {
     list-style-type: decimal;
     margin: 1rem 0 2rem 0;
