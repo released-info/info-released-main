@@ -488,6 +488,26 @@ section .row {
     text-decoration: none;
 }
 
+.footer-dark .social-links {
+    margin-bottom: 0.8rem;
+}
+
+.footer-dark .social-links li {
+    padding: 0 0.6rem;
+    cursor: pointer;
+}
+
+.footer-dark .social-links li a {
+    display: inline-block;
+    font-size: 1.2rem !important;
+    opacity: 0.4;
+    color: #fff !important
+}
+
+.footer-dark .social-links li a:hover {
+    opacity: 0.7;
+}
+
 .footer-dark .highlight a {
     color: #fff !important;
     font-weight: 400;
