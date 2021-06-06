@@ -84,7 +84,7 @@ $(function () {
         }
     }
 
-    var loadHighlightForDescription = function() {
+    var loadHighlightForDescription = function(inputId, elId) {
         var text = $(inputId).val()
         if (text) {
             var el = $(elId)

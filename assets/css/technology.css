@@ -46,6 +46,8 @@ section .row {
     padding: 0 1rem;
     cursor: pointer;
     opacity: 0.6;
+    background-color: rgba(0, 0, 0, 0.42);
+    color: #f2f2f2;
 }
 
 .go-back:hover {
