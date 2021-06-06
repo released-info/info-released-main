@@ -52,6 +52,7 @@ section .row {
 
 .go-back:hover {
     opacity: 0.9;
+    color: #f2f2f2 !important;
 }
 
 @media (min-width: 1074px) {
@@ -300,6 +301,11 @@ section .row {
     background-color: #fff;
 }
 
+.features-section .container-lg {
+    position: relative;
+    z-index: 10;
+}
+
 .features-section ul {
     list-style-type: none;
     padding: 0;
@@ -322,8 +328,8 @@ section .row {
 
 .features-section .logo-container {
     position: absolute;
-    width: 15vw;
-    height: 15vw;
+    z-index: 1;
+    width: 100%;
     right: 0;
     bottom: 0;
 }
@@ -332,37 +338,9 @@ section .row {
     display: block;
     width: 100%;
     height: 100%;
-    background-position: 50% 50%;
+    background-position: 100% 100%;
     background-repeat: no-repeat;
     background-size: contain !important;
-}
-
-@media (min-width: 1300px) {
-    .features-section .logo-container {
-        max-width: 260px;
-        max-height: 260px;
-    }
-}
-
-@media (min-width: 1400px) {
-    .features-section .logo-container {
-        max-width: 280px;
-        max-height: 280px;
-    }
-}
-
-@media (min-width: 1700px) {
-    .features-section .logo-container {
-        max-width: 320px;
-        max-height: 320px;
-    }
-}
-
-@media (min-width: 1750px) {
-    .features-section .logo-container {
-        max-width: 340px;
-        max-height: 340px;
-    }
 }
 
 .posts-section,

@@ -1,9 +1,5 @@
 $(function () {
 
-    $(".go-back").on('click', function() {
-        window.history.back()
-    })
-
     var getMetaTag = function (metaName) {
         var metas = document.getElementsByTagName('meta');
         for (let i = 0; i < metas.length; i++) {
