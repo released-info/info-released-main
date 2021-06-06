@@ -533,4 +533,5 @@ section .row {
     background-color: rgba(255, 193, 7, 0.2);
     border-radius: 1rem;
     margin-left: 0.5rem;
+    display: inline-block;
 }

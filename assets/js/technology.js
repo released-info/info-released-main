@@ -84,10 +84,10 @@ $(function () {
         }
     }
 
-    var loadHighlightForDescription1 = function() {
-        var text = $("#highlighted-text-desc1").val()
+    var loadHighlightForDescription = function() {
+        var text = $(inputId).val()
         if (text) {
-            var el = $('#highlightTextDescription1')
+            var el = $(elId)
             if (el.text().includes(text)) {
                 var items = el.text().split(text)
                 el.html(items[0] + ' <span class="highlightFoundedText">' + text + '</span> ' + items[1])
@@ -99,6 +99,7 @@ $(function () {
     loadFacebook()
     loadLinkedIn()
     loadOdometer()
-    loadHighlightForDescription1();
+    loadHighlightForDescription('#highlighted-text-desc1', '#highlightTextDescription1')
+    loadHighlightForDescription('#highlighted-text-desc2', '#highlightTextDescription2')
 
 })
