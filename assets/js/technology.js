@@ -40,21 +40,8 @@ $(function () {
             }
         }
     }
-
-    var loadHighlightForDescription = function(inputId, elId) {
-        var text = $(inputId).val()
-        if (text) {
-            var el = $(elId)
-            if (el.text().includes(text)) {
-                var items = el.text().split(text)
-                el.html(items[0] + ' <span class="highlightFoundedText">' + text + '</span> ' + items[1])
-            }
-        }
-    }
-
+    
     initReadMoreAboutSection()
     loadOdometer()
-    loadHighlightForDescription('#highlighted-text-desc1', '#highlightTextDescription1')
-    loadHighlightForDescription('#highlighted-text-desc2', '#highlightTextDescription2')
 
 })
