@@ -11,12 +11,18 @@ $(function () {
     };
 
     var showSearchedElements = function (search) {
-        $('#items .col-md-4').each(function () {
+        var count = $('#items .col-md-4').length;
+        $('#items .col-md-4').each(function (i) {
             if ($(this)[0].dataset.key.toLowerCase().indexOf(search.toLowerCase()) === -1) {
                 $(this).hide()
-                return
+            } else {
+                $(this).show()
             }
-            $(this).show()
+            if (i+1 === count) {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: 0
+                }, 0);
+            }
         })
         if($("#items .col-md-4:visible").length === 0) {
             $("#search-no-result").show()
