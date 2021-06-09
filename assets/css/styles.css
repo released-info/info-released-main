@@ -96,6 +96,7 @@ html, body {
     opacity: 0.3;
     padding: 3px 10px;
     cursor: pointer;
+    display: none;
   }
 
   header .search-bar i.bi:hover {

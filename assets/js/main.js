@@ -3,6 +3,7 @@ $(function () {
     // reset search
     var resetSearch = function () {
         $('#search-input').val('')
+        $('#search-clear').hide()
         $("#search-no-result").hide()
         $('#items .col-md-4').each(function () {
             $(this).show()
@@ -28,6 +29,7 @@ $(function () {
     $('#search-input').on('keyup', function (e) {
         var search = $(this).val();
         if (search != '') {
+            $('#search-clear').show()
             showSearchedElements(search)
             return
         }
